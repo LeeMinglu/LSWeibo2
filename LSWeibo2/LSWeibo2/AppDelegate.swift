@@ -19,6 +19,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         sleep(4)
+        
+        window = UIWindow()
+        
+        window?.backgroundColor = UIColor.orange
+        
+        let rootVC = LSMainController()
+        
+        window?.rootViewController = rootVC
+        
+        window?.makeKeyAndVisible()
+        
         return true
     }
 
