@@ -55,8 +55,19 @@ extension LSMainController {
         vc.title = title
         vc.tabBarItem.image = UIImage(named: "tabbar_" + imageName)
         vc.tabBarItem.selectedImage = UIImage(named: "tabbar_" + imageName + "_highlighted")?.withRenderingMode(.alwaysOriginal)
+        
+        //设置tabbar字体的颜色
+        vc.tabBarItem.setTitleTextAttributes([NSFontAttributeName: UIFont.systemFont(ofSize: 16)], for: UIControlState(rawValue: 0) )
+        vc.tabBarItem.setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.orange ], for: .highlighted)
+        
+        
         let nav = LSNavigationController(rootViewController: vc)
         
         return nav
     }
+    
+    
+    
+    
+    
 }
