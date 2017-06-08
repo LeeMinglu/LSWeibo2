@@ -323,6 +323,7 @@
 		1AD324681EDD7CC90092D697 /* visitordiscover_image_message@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AD323471EDD7CC80092D697 /* visitordiscover_image_message@3x.png */; };
 		1AD324691EDD7CC90092D697 /* visitordiscover_image_profile@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AD323481EDD7CC80092D697 /* visitordiscover_image_profile@2x.png */; };
 		1AD3246A1EDD7CC90092D697 /* visitordiscover_image_profile@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AD323491EDD7CC80092D697 /* visitordiscover_image_profile@3x.png */; };
+		1AD65D4E1EDEF7560088D03D /* LSDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD65D4D1EDEF7560088D03D /* LSDemoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -662,6 +663,7 @@
 		1AD323481EDD7CC80092D697 /* visitordiscover_image_profile@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "visitordiscover_image_profile@2x.png"; sourceTree = "<group>"; };
 		1AD323491EDD7CC80092D697 /* visitordiscover_image_profile@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "visitordiscover_image_profile@3x.png"; sourceTree = "<group>"; };
 		1AD3246D1EDD84850092D697 /* Weibo+Bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Weibo+Bridge.h"; sourceTree = "<group>"; };
+		1AD65D4D1EDEF7560088D03D /* LSDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSDemoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -767,6 +769,7 @@
 		1AD321D21EDD7A7D0092D697 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1AD65D4C1EDEF73F0088D03D /* testUI */,
 				1A7BBE4E1EDDA73400D6AC38 /* Main */,
 				1A7BBE4D1EDDA73400D6AC38 /* Home */,
 				1A7BBE4C1EDDA73400D6AC38 /* Discover */,
@@ -1235,6 +1238,14 @@
 			path = Visitor;
 			sourceTree = "<group>";
 		};
+		1AD65D4C1EDEF73F0088D03D /* testUI */ = {
+			isa = PBXGroup;
+			children = (
+				1AD65D4D1EDEF7560088D03D /* LSDemoViewController.swift */,
+			);
+			path = testUI;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1601,6 +1612,7 @@
 				1A7BBE5E1EDDADDB00D6AC38 /* LSProfileController.swift in Sources */,
 				1AD322081EDD7AEE0092D697 /* NSAttributedString+CZAdditon.m in Sources */,
 				1AD3220E1EDD7AEE0092D697 /* UIButton+CZAddition.m in Sources */,
+				1AD65D4E1EDEF7560088D03D /* LSDemoViewController.swift in Sources */,
 				1AD322161EDD7AEE0092D697 /* Bundle+Extensions.swift in Sources */,
 				1AD322101EDD7AEE0092D697 /* UIImage+Extension.m in Sources */,
 				1AD322121EDD7AEE0092D697 /* UIScreen+CZAddition.m in Sources */,

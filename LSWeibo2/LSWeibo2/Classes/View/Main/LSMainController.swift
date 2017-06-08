@@ -9,13 +9,22 @@
 import UIKit
 
 class LSMainController: UITabBarController {
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         //添加子控制器
         setupControllers()
+        setComposeButton()
         
+    }
+    
+     lazy var composeButton: UIButton = UIButton.cz_imageButton("tabbar_compose_icon_add", backgroundImageName: "tabbar_compose_button")
+    
+    @objc  func addFriend() {
+        print("点击加号按钮")
     }
 }
 
@@ -64,6 +73,17 @@ extension LSMainController {
         let nav = LSNavigationController(rootViewController: vc)
         
         return nav
+    }
+    
+    fileprivate func setComposeButton() {
+        
+        
+        let count = tabBar.subviews.count
+        let width: CGFloat = tabBar.bounds.width / CGFloat(count)
+        composeButton.frame = CGRect(x: 2 * width, y: 0, width: width, height: tabBar.bounds.height)
+        composeButton.addTarget(self, action: #selector(addFriend), for: .touchUpInside)
+        
+        self.tabBar.addSubview(composeButton)
     }
     
     
