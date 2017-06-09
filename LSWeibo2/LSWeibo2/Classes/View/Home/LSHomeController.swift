@@ -15,10 +15,21 @@ class LSHomeController: LSBaseController {
 
         // Do any additional setup after loading the view.
        
-        
+           }
+    @objc func addFriend() {
+        print("点击了添加好友")
     }
+
 }
 
 extension LSHomeController {
-
+    override func setupUI() {
+        navigationItem.leftBarButtonItem = UIBarButtonItem.init(title: "好友", fontSize: 17, target: self, action: #selector(addFriend), isBack: false)
+        
+//        let barButton: UIButton = UIButton.cz_textButton("好友", fontSize: 16, normalColor: UIColor.blue, highlightedColor: UIColor.orange)
+//        
+//        barButton.addTarget(self, action: #selector(addFriend), for: .touchUpInside)
+//        
+//        navigationItem.leftBarButtonItem = UIBarButtonItem.init(customView: barButton)
+    }
 }
