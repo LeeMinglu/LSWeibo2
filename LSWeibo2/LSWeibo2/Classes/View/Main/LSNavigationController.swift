@@ -15,21 +15,32 @@ class LSNavigationController: UINavigationController {
 
         // Do any additional setup after loading the view.
     }
+    
+    override func pushViewController(_ viewController: UIViewController, animated: Bool) {
+        
+        if childViewControllers.count > 0 {
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+            //设置tabar为隐藏
+            viewController.hidesBottomBarWhenPushed = true
+            
+            if let vc = (viewController as? LSDemoViewController) {
+                
+                var title = "返回"
+                
+                if childViewControllers.count == 1 {
+                    title = childViewControllers.first?.title ?? title
+                }
+                vc.navigationItem.leftBarButtonItem = UIBarButtonItem.init(title: title, fontSize: 16, target: self, action: #selector(backVC), isBack: true)
+            }
+        }
+            
+        super.pushViewController(viewController, animated: true)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @objc private func backVC() {
+        popViewController(animated: true)
     }
-    */
-
+    
 }
+
+

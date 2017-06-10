@@ -18,6 +18,8 @@ class LSHomeController: LSBaseController {
            }
     @objc func addFriend() {
         print("点击了添加好友")
+        let friendVC = LSDemoViewController()
+        navigationController?.pushViewController(friendVC, animated: true)
     }
 
 }
