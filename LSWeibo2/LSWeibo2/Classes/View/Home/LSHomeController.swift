@@ -26,7 +26,8 @@ class LSHomeController: LSBaseController {
 
 extension LSHomeController {
     override func setupUI() {
-        navigationItem.leftBarButtonItem = UIBarButtonItem.init(title: "好友", fontSize: 17, target: self, action: #selector(addFriend), isBack: false)
+        super.setupUI()
+        navItem.leftBarButtonItem = UIBarButtonItem.init(title: "好友", fontSize: 17, target: self, action: #selector(addFriend), isBack: false)
         
 //        let barButton: UIButton = UIButton.cz_textButton("好友", fontSize: 16, normalColor: UIColor.blue, highlightedColor: UIColor.orange)
 //        

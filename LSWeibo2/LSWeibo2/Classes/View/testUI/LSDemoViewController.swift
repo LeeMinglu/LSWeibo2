@@ -15,7 +15,7 @@ class LSDemoViewController: LSBaseController {
 
         // Do any additional setup after loading the view.
         
-        navigationItem.rightBarButtonItem = UIBarButtonItem.init(title: "下一个", fontSize: 16, target: self, action: #selector(nextVC), isBack: false)
+        navItem.rightBarButtonItem = UIBarButtonItem.init(title: "下一个", fontSize: 16, target: self, action: #selector(nextVC), isBack: false)
     }
     
     @objc private func nextVC() {

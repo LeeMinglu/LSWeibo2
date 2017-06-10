@@ -12,6 +12,7 @@ class LSNavigationController: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationBar.isHidden = true
 
         // Do any additional setup after loading the view.
     }
@@ -30,7 +31,7 @@ class LSNavigationController: UINavigationController {
                 if childViewControllers.count == 1 {
                     title = childViewControllers.first?.title ?? title
                 }
-                vc.navigationItem.leftBarButtonItem = UIBarButtonItem.init(title: title, fontSize: 16, target: self, action: #selector(backVC), isBack: true)
+                vc.navItem.leftBarButtonItem = UIBarButtonItem.init(title: title, fontSize: 16, target: self, action: #selector(backVC), isBack: true)
             }
         }
             
